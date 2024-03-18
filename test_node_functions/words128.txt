@@ -1,0 +1,1 @@
+wordlists/words128.txt lecture trie size (number of words) 128, descendents (number of nodes) 1029
