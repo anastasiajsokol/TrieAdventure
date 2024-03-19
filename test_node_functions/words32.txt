@@ -1,1 +1,1 @@
-wordlists/words32.txt lecture trie size (number of words) 32, descendents (number of nodes) 285
+wordlists/words32.txt lecture trie size (number of words) 32, descendants (number of nodes) 285

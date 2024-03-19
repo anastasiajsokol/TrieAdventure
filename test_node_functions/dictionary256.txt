@@ -1,1 +1,1 @@
-wordlists/dictionary256.txt lecture trie size (number of words) 256, descendents (number of nodes) 1856
+wordlists/dictionary256.txt lecture trie size (number of words) 256, descendants (number of nodes) 1856

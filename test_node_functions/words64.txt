@@ -1,1 +1,1 @@
-wordlists/words64.txt lecture trie size (number of words) 64, descendents (number of nodes) 523
+wordlists/words64.txt lecture trie size (number of words) 64, descendants (number of nodes) 523

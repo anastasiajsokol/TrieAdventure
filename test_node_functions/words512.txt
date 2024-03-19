@@ -1,1 +1,1 @@
-wordlists/words512.txt lecture trie size (number of words) 512, descendents (number of nodes) 3671
+wordlists/words512.txt lecture trie size (number of words) 512, descendants (number of nodes) 3671

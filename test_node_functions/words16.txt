@@ -1,1 +1,1 @@
-wordlists/words16.txt lecture trie size (number of words) 16, descendents (number of nodes) 142
+wordlists/words16.txt lecture trie size (number of words) 16, descendants (number of nodes) 142

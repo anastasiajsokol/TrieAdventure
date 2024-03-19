@@ -1,1 +1,1 @@
-wordlists/words8.txt lecture trie size (number of words) 8, descendents (number of nodes) 64
+wordlists/words8.txt lecture trie size (number of words) 8, descendants (number of nodes) 64

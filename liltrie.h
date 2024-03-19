@@ -56,7 +56,7 @@ void test_node_functions( Y& trie, std::vector<std::string>& dict, bool sample =
 	trie.finalize();
 
 	std::cout << "size (number of words) " << trie.size() << ", ";
-	std::cout << "descendents (number of nodes) " << trie.descendents() << std::endl;
+	std::cout << "descendants (number of nodes) " << trie.descendants() << std::endl;
 
 	// shuffle again, so they aren't in the same order as they were added to trie
 	fisher_yates( inwords );
