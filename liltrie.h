@@ -116,6 +116,15 @@ void collect_child_histogram( Y& trie, std::vector<std::string>& dict, std::vect
 
 	trie.children_histogram( histo );
 
+	// sanity check, sum of histo should be number of descendants 
+	size_t nodecount = 0;
+	for( auto count: histo ) nodecount += count;
+	if( nodecount != trie.descendants() ) {
+		std::cerr << "WARNING:"<<__FILE__<<":"<<__LINE__<<": trie descendants() = " << trie.descendants() << " != "
+			<< nodecount << " = child_histogram count sum" << std::endl;
+		::exit(1);
+	}
+
 	if( !show ) return;
 
 	using namespace std;
