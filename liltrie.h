@@ -169,21 +169,24 @@ std::chrono::duration<double>
 		start_time = std::chrono::system_clock::now(); 
 	}
 
-   	for( long i=0; i<trie_size; i+=2 ) {
-		// first of two must be in the trie
-		if( !trie.contains( words[i] ) ) {
-			std::cerr << "error: trie .contains(\"" << words[i] << "\") failure "
-				"(!contains() when it should --- back to testing?" << std::endl;
-			::exit(1);
+	long MY_MACHINE_IS_A_BEAST=1;
+	do {
+		for( long i=0; i<trie_size; i+=2 ) {
+			// first of two must be in the trie
+			if( !trie.contains( words[i] ) ) {
+				std::cerr << "error: trie .contains(\"" << words[i] << "\") failure "
+					"(!contains() when it should --- back to testing?" << std::endl;
+				::exit(1);
+			}
+			// second of two is not in the trie
+			if( trie.contains( words[i+1] ) ) {
+				std::cerr << "error: trie .contains(\"" << words[i] << "\") failure "
+					"(contains() when it does not --- back to testing?" << std::endl;
+				::exit(1);
+			}
+			trie.contains(words[i]);
 		}
-		// second of two is not in the trie
-		if( trie.contains( words[i+1] ) ) {
-			std::cerr << "error: trie .contains(\"" << words[i] << "\") failure "
-				"(contains() when it does not --- back to testing?" << std::endl;
-			::exit(1);
-		}
-		trie.contains(words[i]);
-	}
+	} while( --MY_MACHINE_IS_A_BEAST > 0 );
     auto stop_time = std::chrono::system_clock::now(); 
     return stop_time - start_time; 
 }
