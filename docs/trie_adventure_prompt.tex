@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage[dvipsnames]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{fontspec}
+
+\setmainfont{Ubuntu}
+
+\titleformat{\section}[block]{\bfseries\filcenter}{}{1em}{}
+
+\definecolor{tldrbox}{rgb}{0.847,1,0.831}
+\definecolor{warningbox}{rgb}{0.996,1,0.831}
+\definecolor{infobox}{rgb}{0.831,0.859,1}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace{2cm}
+    
+    {\Huge Trie Adventure}\\[2cm]
+    
+    {\huge Node Definitions For A Smaller Footprint}\\[2cm]
+    
+    {\large Originally Developed by}\\[0.3cm]
+    {\large Keith Hellman}\\[2cm]
+    
+    {\large Heavily Modified by}\\[0.3cm]
+    {\large Anastasia Sokol}\\
+    
+    \vfill
+    
+    {\large Updated on June 2, 2024}
+\end{titlepage}
+
+\section{Introduction}
+
+We have studied the abstract trie data structure, a specialized tree designed for the quick search of sequenced data such as words, and we also implemented a trie in 3P. Both the lecture and 3P version store a pointer to each of the 26 possible subsequent lowercase letters in \textit{each node}, which is \textit{208 bytes} on most machines, and means that storing the word "algorithms" takes almost two kilobytes!
+
+In this project you will explore some specialized node structures to decrease the memory footprint of the trie structure. As you go, write responses to the bolded, numbered questions along with any properly formatted graphs, charts, or equations that the question asks for. This project has a longer prompt that some of the past assignments, but most of the content is there to guide you through the project, and the deliverables are equivalent to -- if not less than -- other analysis projects in this class.
+
+\begin{tcolorbox}[colback=tldrbox, colframe=black, width=\textwidth, boxrule=0.5mm, arc=5mm, auto outer arc]
+        \textbf{tl;dr} This project is about decreasing the memory footprint of the trie class. Answer the bold questions. \textit{It is not as much work as it seems.} If you get stuck or have questions do not hesitate to reach out for help after class or in office hours. Good luck!
+\end{tcolorbox}
+
+\section{The Default Trie}
+
+\section{A Bitmasked Trie}
+
+\section{Empirical Measurements}
+
+\section{Rubric}
+
+\section{Language Feature Explanations}
+
+\end{document}
