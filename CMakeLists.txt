@@ -20,4 +20,4 @@ file(COPY dictionary.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 # setup compilation scope and options
 include_directories(.)
 add_compile_options(-pedantic -Wall -Wextra -Werror=vla -std=c++20)
-add_executable(adventure main.cpp trie.hpp trie.cpp)
+add_executable(adventure main.cpp trie.h trie.cpp)
