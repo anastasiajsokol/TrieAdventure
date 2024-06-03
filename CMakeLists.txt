@@ -42,8 +42,8 @@ add_executable(
 )
 
 add_executable(
-  tests
-  tests.cpp
+  system_tests
+  tests/system_tests.cpp
   trie.hpp nodes/utility.hpp nodes/node.hpp
 )
 
@@ -51,10 +51,10 @@ add_executable(
 enable_testing()
 
 target_link_libraries(
-  tests
+  system_tests
   GTest::gtest_main
 )
 
 include(GoogleTest)
 
-gtest_discover_tests(tests)
+gtest_discover_tests(system_tests)
