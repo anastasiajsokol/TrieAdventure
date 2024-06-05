@@ -65,7 +65,11 @@ The first thing we need to do is gather some data about how the trie class is be
 
     \item \verb|void StatisticsNode::record_histogram(std::array<std::size_t, 26> &histogram)|
 
-    Adds to a histogram the nodes at-or-below the current node. To implement this increment the value representing the number of children at the current node, for example \verb|++histogram[count_children()];|, then call \verb|record_histogram| for all of the non-\verb|nullptr| children of the current node.
+    Adds to a histogram the nodes at-or-below the current node. To implement this increment the value representing the number of children at the current node, for example
+    
+    \verb|++histogram[count_children()];|
+    
+    then call \verb|record_histogram| for all of the children of the current node that are not \verb|nullptr|.
 \end{itemize}
 
 After implementing these methods you can run the statistics tests to verify your implementation, then use \textbf{SOMETHING} to record the statistics for later use. Finally, add the deliverable to your analysis document.
