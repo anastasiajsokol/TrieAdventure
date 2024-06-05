@@ -59,4 +59,7 @@ constexpr char index_to_character(const std::size_t index){
     }
 }
 
+// used as a defualt constant returned by unimplemented functions
+constexpr std::size_t ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING = 42;
+
 #endif
