@@ -1,5 +1,5 @@
-#ifndef NODES_TYPES_HPP
-#define NODES_TYPES_HPP
+#ifndef NODES_UTILITY_HPP
+#define NODES_UTILITY_HPP
 
 #include <optional>
 #include <cstddef>
