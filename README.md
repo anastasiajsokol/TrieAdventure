@@ -10,14 +10,14 @@ Heavily modified by Anastasia Sokol.
 1. `cmake . -B build`
 2. `cd build`
 3. `make`
-4. `./run-main`
+4. `./main`
 
 ## Setup Instructions (Windows native)
 1. Consider installing [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) or another Linux/GNU distribution. Then follow the default instructions if you do.
 2. `cmake . -B build -G "MinGW Makefiles"`
 3. `cd build`
 4. `mingw32-make`
-5. `./run-main`
+5. `./main`
 
 ## Project Description
 
