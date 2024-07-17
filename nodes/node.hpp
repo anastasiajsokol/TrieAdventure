@@ -6,7 +6,7 @@
 // The basic node implementation, which is similar to the one discussed in class
 struct Node {
     std::array<pointer_t<Node>, 26> children;
-    bool terminal;
+    bool terminal = false;
 
     std::optional<Node*> getprefix(prefix_t prefix, bool create = false){
         if(!*prefix){

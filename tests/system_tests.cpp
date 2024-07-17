@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "../nodes/node.hpp"
-#include "../trie.hpp"
+#include "../tries/trie.hpp"
 
 TEST(SystemTest, TrieSanityCheck) {
     Trie<Node> trie;

@@ -1,7 +1,7 @@
 #ifndef TRIE_H
 #define TRIE_H
 
-#include "nodes/utility.hpp"
+#include "../nodes/utility.hpp"
 
 // Generic trie class implementation
 // See documation for required node interface

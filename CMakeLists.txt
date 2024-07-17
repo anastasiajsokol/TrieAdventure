@@ -1,7 +1,9 @@
 # CMakeLists.txt for the Trie Adventure analysis project
 
+cmake_policy(SET CMP0048 NEW)
+
 # title and scope
-project(trieadventure)
+project(trieadventure VERSION 0.1)
 
 # project requirements
 cmake_minimum_required(VERSION 3.14)
@@ -34,17 +36,30 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
-# executables
+# primary executables
 add_executable(
   main
-  main.cpp trie.hpp
+  main.cpp tries/trie.hpp
   nodes/utility.hpp nodes/node.hpp nodes/bitmask.hpp nodes/deep.hpp
 )
 
 add_executable(
+  statistics
+  statistics.cpp tries/statisticstrie.hpp
+  nodes/utility.hpp nodes/statistics.hpp
+)
+
+# testing executables
+add_executable(
   system_tests
   tests/system_tests.cpp
-  trie.hpp nodes/utility.hpp nodes/node.hpp
+  tries/trie.hpp nodes/utility.hpp nodes/node.hpp
+)
+
+add_executable(
+  statistics_tests
+  tests/statistics_tests.cpp
+  tries/statisticstrie.hpp nodes/utility.hpp nodes/statistics.hpp
 )
 
 # enable testing
@@ -55,6 +70,12 @@ target_link_libraries(
   GTest::gtest_main
 )
 
+target_link_libraries(
+  statistics_tests
+  GTest::gtest_main
+)
+
 include(GoogleTest)
 
 gtest_discover_tests(system_tests)
+gtest_discover_tests(statistics_tests)
